@@ -63,4 +63,4 @@ jobs:
           app-name: 'tiktokcloneapi'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C4BB05CC59AE4AE7A04841B9082D40FF }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
