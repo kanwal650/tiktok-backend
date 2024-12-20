@@ -12,15 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('password_reset_tokens', function (Blueprint $table) {
-            $table->dropPrimary();  // Remove the current primary key if there's one
-            $table->primary('email');
+            $table->string('email');
             $table->string('token');
             $table->timestamp('created_at')->nullable();
         });
 
         Schema::table('password_reset_tokens', function (Blueprint $table) {
             // Remove the existing primary key
-            $table->dropPrimary();
+            // $table->dropPrimary();
     
             // Add a new primary key on the 'email' column
             $table->primary('email');
