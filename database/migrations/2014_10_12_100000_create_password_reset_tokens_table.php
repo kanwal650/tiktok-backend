@@ -17,6 +17,14 @@ return new class extends Migration
             $table->string('token');
             $table->timestamp('created_at')->nullable();
         });
+
+        Schema::table('password_reset_tokens', function (Blueprint $table) {
+            // Remove the existing primary key
+            $table->dropPrimary();
+    
+            // Add a new primary key on the 'email' column
+            $table->primary('email');
+        });
     }
 
     /**
