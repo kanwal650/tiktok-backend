@@ -19,7 +19,7 @@ return new class extends Migration
 
         Schema::table('password_reset_tokens', function (Blueprint $table) {
             // Remove the existing primary key
-            // $table->dropPrimary();
+            $table->dropPrimary();
     
             // Add a new primary key on the 'email' column
             $table->primary('email');
